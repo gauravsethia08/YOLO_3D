@@ -1,0 +1,19 @@
+<<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- Topic having the details about camera_info-->
+  <arg name="camera_topic" default="/kinect/color/camera_info" value="/kinect/color/camera_info" />
+
+  <!-- Topic having the raw 8 bit color image-->
+  <arg name="image_topic" default="/kinect/color/image_raw" value="/kinect/color/image_raw" />
+
+  <!-- Topic having the raw depth image-->
+  <arg name="depth_topic" default="/kinect/depth/image_raw" value="/kinect/depth/image_raw" />
+
+  <!-- Optical frame of camera -->
+  <arg name="camera_frame" default="/kinect_optical_frame" value="/kinect_optical_frame" />
+
+  <!--Lanuching the node-->
+  <node name="yolo_3d" pkg="YOLO_3D" type="demo.py"
+    args="$(arg camera_topic) $(arg image_topic) $(arg depth_topic) $(arg camera_frame)"/>
+
+</launch>
