@@ -11,12 +11,14 @@ $ pip install -r requirements.txt
 
 2. Place the YOLO weights and config file in yolo folder and change the path accordingly in init function of Perception class.
 
-3. Make the demo file executable
+3. Change the image topics in launch file.
+
+4. Make the demo file executable
 ```
 $ chmod +x demo.py
 ```
 
-4. Execute the demo file
+5. Execute the demo file
 ```
 $ roslaunch YOLO_3D estimate_pose.launch
 ```
